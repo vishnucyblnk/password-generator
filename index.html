@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <!-- CSS link -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
+    <!-- fontawsome link -->
+    <script src="https://kit.fontawesome.com/375b182451.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="box">
+        <div class="empty-box">
+            <h1>PASSWORD GENERATOR</h1>
+        </div>
+        <div class="inner-box">
+            <div class="displayer">
+                <input id="disp" type="text" readonly>
+                <button id="clipcopy" class="copyclip" onclick="copyclip()" type="button"><i class="fa-solid fa-copy" style="color: rgb(0, 0, 0);"></i></button>
+            </div>
+            
+            <form class="check_form">
+                <div class="inner-row">
+                    <label for="length">Password Length</label>
+                    <input id="len" name="length" type="number" min="12" step="1" placeholder="Minimum Length 12" required>
+                </div>
+                <div class="inner-row">
+                    <p> Include Lowercase Letters</p>
+                    <input id="low" class="chckbox" type="checkbox" name="lowercase" onclick="addOpt(id,value)"  value="low()+">
+                    
+                </div>
+                <div class="inner-row">
+                    <label for="uppercase"> Include Uppercase Letters</label>
+                    <input id="upp" class="chckbox" type="checkbox" name="uppercase" onclick="addOpt(id,value)"  value="upp()+">
+                </div>
+                <div class="inner-row">
+                    <label for="numbers"> Include Numbers</label>
+                    <input id="num" class="chckbox" type="checkbox" name="number" onclick="addOpt(id,value)"  value="num()+">
+                </div>
+                <div class="inner-row">
+                    <label for="numbers"> Include Symbols</label>
+                    <input id="sym" class="chckbox" type="checkbox" name="symbol" onclick="addOpt(id,value)"  value="sym()+">
+                </div>
+                <button class="passbutt" id="passgen" type="button" onclick="passGen()">Generate Password
+                </button>
+            </form>
+        </div>
+    </div>
+    
+
+</body>
+<script src="./pass.js"></script>
+</html>
