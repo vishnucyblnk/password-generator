@@ -47,16 +47,20 @@ function passGen(){
     }
     else{
         if(!len.value&&(!opt &&len.value<12)){
-            alert("Enter Password length and Tick Options")
+            // alert("Enter Password length and Tick Options")
+            alrtlen.innerHTML = "*Enter Password length and Tick Options";
         }
         else if(!len.value){
-            alert("Enter Password Length");
+            // alert("Enter Password Length");
+            alrtlen.innerHTML = "*Enter Password length";
         }
         else if(!opt){
-            alert("Tick Atleast one Option");
+            // alert("Tick Atleast one Option");
+            alrtlen.innerHTML = "*Tick Atleast one Option";
         }
         else{
-            alert("Enter Password Length minimum 12 or more than that")
+            // alert("Enter Password Length minimum 12 or more than that")
+            alrtlen.innerHTML = "*Enter Password Length minimum 12 or more than that";
         }
     }
 
@@ -71,7 +75,7 @@ function copyclip() {
 
     // Alert the copied text
     if(clipText){
-        alert("copied PASSWORD : " + clipText);
+        alert("PASSWORD Copied : " + clipText);
     }
     else{
         alert("Nothing to Copy");
